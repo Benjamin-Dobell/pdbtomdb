@@ -16,3 +16,9 @@ PdbToMdb.exe <DLL path>
 mono PdbToMdb.exe <DLL path>
 ```
 
+## Paths / Dependencies
+
+For simplicity, all dependencies of the DLL must be placed in the same directory as the target DLL.
+
+The PDB must also be adjacent to the target DLL, and the resultant MDB will be output adjacent to the target DLL also.
+
