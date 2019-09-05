@@ -10,15 +10,21 @@ A super simple CLI program to convert PDB to MDB (Mono). This project is trivial
 PdbToMdb.exe <DLL path>
 ```
 
-## UNIX
+## Mono (Unix)
 
 ```
 mono PdbToMdb.exe <DLL path>
 ```
 
+## .NET Core (Unix)
+
+```
+dotnet PdbToMdb.dll <DLL path>
+```
+
 ## Paths / Dependencies
 
-For simplicity, all dependencies of the DLL must be placed in the same directory as the target DLL.
+For simplicity, all dependencies of the DLL, as well as the target DLL's PDB, must be placed in the same directory as the target DLL.
 
-The PDB must also be adjacent to the target DLL, and the resultant MDB will be output adjacent to the target DLL also.
+The resultant MDB will also be output adjacent to the target DLL.
 

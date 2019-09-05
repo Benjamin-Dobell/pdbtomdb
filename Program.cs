@@ -12,8 +12,14 @@ namespace PdbToMdb
 	{
 		private static string Usage()
 		{
-			var prefix = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "" : "mono ";
-			return $"Usage: {prefix}PdbToMdb.exe <DLL path>";
+			var parameters = "<DLL path>";
+
+#if NETCOREAPP
+			return $"Usage: dotnet PdbToMdb.dll {parameters}";
+#else
+			var prefix = Type.GetType("Mono.Runtime") != null ? "mono " : "";
+			return $"Usage: {prefix}PdbToMdb.exe {parameters}";
+#endif
 		}
 
 		public static int Main(string[] args)
