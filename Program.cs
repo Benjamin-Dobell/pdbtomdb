@@ -1,7 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
 using Mono.Cecil;
 using Mono.Cecil.Mdb;
 using Mono.Cecil.Pdb;
